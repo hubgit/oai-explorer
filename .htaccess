@@ -1,0 +1,9 @@
+DirectoryIndex index.php
+
+Options FollowSymLinks
+
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !/static/
+RewriteRule ^(.*)$ index.php?_path=$1 [L,QSA]
+
+php_value max_execution_time 60
